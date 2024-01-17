@@ -600,3 +600,15 @@ The output might mean that `cosmoaddr2line` is failing to resolve addresses.
 > The cosmoaddr2line program may be used to print backtraces, based on DWARF data, whenever one of your programs reports a crash. It accepts as an argument the ELF executable produced by cosmocc, which is different from the APE executable. For example, if cosmocc compiles a program named hello then you'll need to pass either hello.com.dbg (x86-64) or hello.aarch64.elf to cosmoaddr2line to get the backtrace. After the ELf executable comes the program counter (instruction pointer) addresses which are easily obtained using \_\_builtin_frame_address(0). Cosmo can make this easier in certain cases. The ShowCrashReports() feature may print the cosmoaddr2line command you'll need to run, to get a better backtrace. On Windows, the Cosmopolitan runtime will output the command to the --strace log whenever your program dies due to a fatal signal that's blocked or in the SIG_DFL disposition.
 
 Perhaps it's time for me to write a github issue asking for support.
+
+--
+
+Actually, after looking around more, other projects seem to have issues with the same error:
+
+```
+/usr/src/debug/hip-runtime-amd/clr-rocm-5.7.1/rocclr/os/os_posix.cpp:310: static void amd::Os::currentStackInfo(unsigned char**, size_t*): Assertion `Os::currentStackPtr() >= *base - *size && Os::currentStackPtr() < *base && "just checking"' failed.
+```
+
+Maybe my graphics card is not supported by ROCm, even though I can install the tools on my machine and they (seem to) work:
+
+![screenshot](./log/screenshot_03.png)
