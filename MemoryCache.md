@@ -239,4 +239,120 @@ I wonder why `wineserver` is running. Is that related? I'll have to find out.
 
 ![screenshot](./screenshots/screenshot_02.png)
 
-Anyway, I can't tell if the GPU flag is being respected. If I put in `--gpu foo`, it should fail, right?
+Ok, I found out. After I rebooted, the `binfmt_misc` registrations I added were removed, so wine was invoked for the llamafile binary format. Surprisingly, it seemed that everything worked, but it was extremely slow to start. When I added the correct registrations then the server started immediately.
+
+Anyway, I can't tell if the GPU flag is being respected. If I put in `--gpu foo`, it should fail, right? Hmm. I tried, but apparently this does not cause it to fail. I need to figure out how to check whether this is successfully using my (AMD) GPU.
+
+Well, I discovered `rocm-smi`, which is similar to `nvidia-smi`. I can `watch -n 2 rocm-smi` to see a GPU stats updated every two seconds. And I also discovered this "PROTIP", in the output of `llava-v1.5-7b-q4.llamafile --help`:
+
+> PROTIP
+>
+> The -ngl 35 flag needs to be passed in order to use GPUs made by NVIDIA
+> and AMD. It's not enabled by default since it sometimes needs to be
+> tuned based on the system hardware and model architecture, in order to
+> achieve optimal performance, and avoid compromising a shared display.
+
+So, trying again:
+
+```sh
+➜ ~/Downloads/llava-v1.5-7b-q4.llamafile --gpu amd --nobrowser -ngl 35
+initializing gpu module...
+note: won't compile AMD GPU support because $HIP_PATH/bin/clang++ is missing
+prebuilt binary /zip/ggml-rocm.so not found
+fatal error: support for --gpu amd was explicitly requested, but it wasn't available
+```
+
+Nice! Now we're getting somewhere. I don't have the `$HIP_PATH` set to anything, and there's also not a `clang++` where my other `rocm` tools are:
+
+```sh
+➜ which clang++
+/usr/bin/clang++
+
+➜ clang++ --version
+clang version 16.0.6
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+
+➜ ls /opt/rocm/bin/clang*
+/opt/rocm/bin/clang-ocl
+
+➜ ls /opt/rocm/bin/*cc
+/opt/rocm/bin/hipcc
+```
+
+Let's try setting `$HIP_PATH` to `/opt/rocm`. No, same error.
+
+I wonder what the difference between these three things are:
+
+```sh
+➜ /opt/rocm/bin/hipcc --version
+HIP version: 5.7.31921-
+clang version 17.0.0
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rocm/llvm/bin
+
+➜ clang++ --version
+clang version 16.0.6
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+
+➜ clang-ocl --version
+clang version 17.0.0
+Target: amdgcn-amd-amdhsa
+Thread model: posix
+InstalledDir: /opt/rocm/llvm/bin
+/opt/rocm/llvm/bin/llvm-link: No such file or directory
+clang version 17.0.0
+Target: amdgcn-amd-amdhsa
+Thread model: posix
+InstalledDir: /opt/rocm/llvm/bin
+```
+
+Maybe `hipcc` is a version of `clang++`. Let's try creating a symlink:
+
+```sh
+➜ sudo ln -s /opt/rocm/bin/hipcc /opt/rocm/bin/clang++
+```
+
+Hmm, running with that symlink seems to have failed. (`llama2.log`)
+
+What if I symlink my regular `clang++` install?
+
+```sh
+➜ sudo ln -s /usr/bin/clang++ /opt/rocm/bin/clang++
+```
+
+No, that's not right either. Ok. So there's supposed to be a `clang++` in my `HIP_PATH/bin` directory.
+
+I think I figured out that `ggml-rocm.so` is built dynamically and stored in `~/.llamafile/`. If I mess up and create a bad version of this, I need to delete it or else future things will fail. But interestingly, symlinking `hipcc` or `clang++` will allow that step to succeed. When I inspect `llama2.log`, I see:
+
+```
+dynamically linking /home/john/.llamafile/ggml-rocm.so
+```
+
+Which means that it used `hipcc` or `/usr/bin/clang++` to compile or build. So either the symlink was correct and I'm onto a new issue, or the symlink was incorrect and leading to this error.
+
+Let's inspect the log some more...
+
+```
+llava-v1.5-7b-q4.llamafile: /usr/src/debug/hip-runtime-amd/clr-rocm-5.7.1/rocclr/os/os_posix.cpp:310: static void amd::Os::currentStackInfo(unsigned char**, size_t*): Assertion `Os::currentStackPtr() >= *base - *size && Os::currentStackPtr() < *base && "just checking"' failed.
+cosmoaddr2line /home/john/Downloads/llava-v1.5-7b-q4.llamafile 7ff98a93983c 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010
+
+...
+
+0x00007ff98a8a9010: ?? ??:0
+
+...
+
+10008004-10008018 rw-pa-     21x automap 1344kB w/ 2052mB hole
+1001005b-1001ffa4 r--s-- 65'354x automap 4085mB w/ 96tB hole
+6fd00004-6fd0000b rw-paF      8x zipos 512kB w/ 64gB hole
+6fe00004-6fe00004 rw-paF      1x g_fds 64kB
+# 4087mB total mapped memory
+/home/john/Downloads/llava-v1.5-7b-q4.llamafile -m llava-v1.5-7b-Q4_K.gguf --mmproj llava-v1.5-7b-mmproj-Q4_0.gguf --gpu amd --nobrowser -ngl 35
+[1]    41074 IOT instruction (core dumped)  ~/Downloads/llava-v1.5-7b-q4.llamafile --gpu amd --nobrowser -ngl 35
+
+```
