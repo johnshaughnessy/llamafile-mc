@@ -1,0 +1,288 @@
+➜ make -j8
+.cosmocc/3.2.4/bin/mkdeps -o o//depend -r o// llamafile/addnl.c llamafile/check_cpu.c llamafile/cuda.c llamafile/extract.c llamafile/get_app_dir.c llamafile/get_tmp_dir.c llamafile/gpu.c llamafile/has.c llamafile/help.c llamafile/init.c llamafile/is_file_newer_than.c llamafile/launch_browser.c llamafile/llamafile.c llamafile/log.c llamafile/metal.c llamafile/schlep.c llamafile/x.c llamafile/zipalign.c llamafile/zip.c llamafile/zipcheck.c llama.cpp/ggml-alloc.c llama.cpp/ggml-backend.c llama.cpp/ggml.c llama.cpp/ggml-quants.c llama.cpp/build-info.cpp llama.cpp/common.cpp llama.cpp/console.cpp llama.cpp/grammar-parser.cpp llama.cpp/llama.cpp llama.cpp/sampling.cpp llama.cpp/llava/clip.cpp llama.cpp/llava/llava-cli.cpp llama.cpp/llava/llava.cpp llama.cpp/llava/llava-quantize.cpp llama.cpp/server/server.cpp llama.cpp/main/main.cpp llama.cpp/quantize/quantize.cpp llama.cpp/perplexity/perplexity.cpp llamafile/llamafile.h llamafile/log.h llamafile/tinyblas.h llamafile/version.h llamafile/x.h llamafile/zip.h llama.cpp/base64.h llama.cpp/common.h llama.cpp/console.h llama.cpp/ggml-alloc.h llama.cpp/ggml-backend.h llama.cpp/ggml-backend-impl.h llama.cpp/ggml-cuda.h llama.cpp/ggml.h llama.cpp/ggml-impl.h llama.cpp/ggml-metal.h llama.cpp/ggml-quants.h llama.cpp/grammar-parser.h llama.cpp/llamafile.h llama.cpp/llama.h llama.cpp/log.h llama.cpp/sampling.h llama.cpp/stb_image.h llama.cpp/unicode.h llama.cpp/llava/clip.h llama.cpp/llava/llava.h llama.cpp/server/httplib.h llama.cpp/server/json.h llama.cpp/server/server.h     llama.cpp/ggml_vec_dot_iq2_xxs_q8_K.inc llama.cpp/ggml_vec_dot_q2_K_q8_K_256.inc llama.cpp/ggml_vec_dot_q3_K_q8_K_256.inc llama.cpp/ggml_vec_dot_q4_0_q8_0.inc llama.cpp/ggml_vec_dot_q4_1_q8_1.inc llama.cpp/ggml_vec_dot_q4_K_q8_K_256.inc llama.cpp/ggml_vec_dot_q5_0_q8_0.inc llama.cpp/ggml_vec_dot_q5_1_q8_1.inc llama.cpp/ggml_vec_dot_q5_K_q8_K_256.inc llama.cpp/ggml_vec_dot_q6_K_q8_K_256.inc llama.cpp/ggml_vec_dot_q8_0_q8_0.inc
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/main/main.o llama.cpp/main/main.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/server/server.o llama.cpp/server/server.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/llava/clip.o llama.cpp/llava/clip.cpp
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/gpu.o llamafile/gpu.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/has.o llamafile/has.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/get_tmp_dir.o llamafile/get_tmp_dir.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/help.o llamafile/help.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/init.o llamafile/init.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/is_file_newer_than.o llamafile/is_file_newer_than.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/llamafile.o llamafile/llamafile.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/launch_browser.o llamafile/launch_browser.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/log.o llamafile/log.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/metal.o llamafile/metal.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/schlep.o llamafile/schlep.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/x.o llamafile/x.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/zipalign.o llamafile/zipalign.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/zip.o llamafile/zip.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llamafile/zipcheck.o llamafile/zipcheck.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/addnl.c.zip.o llamafile/addnl.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/addnl.c.zip.o llamafile/addnl.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/BUILD.mk.zip.o llamafile/BUILD.mk
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/BUILD.mk.zip.o llamafile/BUILD.mk
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/check_cpu.c.zip.o llamafile/check_cpu.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/check_cpu.c.zip.o llamafile/check_cpu.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/compcap.cu.zip.o llamafile/compcap.cu
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/compcap.cu.zip.o llamafile/compcap.cu
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/copy.sh.zip.o llamafile/copy.sh
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/copy.sh.zip.o llamafile/copy.sh
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/cuda.bat.zip.o llamafile/cuda.bat
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/cuda.bat.zip.o llamafile/cuda.bat
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/cuda.c.zip.o llamafile/cuda.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/cuda.c.zip.o llamafile/cuda.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/cuda.sh.zip.o llamafile/cuda.sh
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/cuda.sh.zip.o llamafile/cuda.sh
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/extract.c.zip.o llamafile/extract.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/extract.c.zip.o llamafile/extract.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/get_app_dir.c.zip.o llamafile/get_app_dir.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/get_app_dir.c.zip.o llamafile/get_app_dir.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/get_tmp_dir.c.zip.o llamafile/get_tmp_dir.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/get_tmp_dir.c.zip.o llamafile/get_tmp_dir.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/gpu.c.zip.o llamafile/gpu.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/gpu.c.zip.o llamafile/gpu.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/has.c.zip.o llamafile/has.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/has.c.zip.o llamafile/has.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/help.c.zip.o llamafile/help.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/help.c.zip.o llamafile/help.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/init.c.zip.o llamafile/init.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/init.c.zip.o llamafile/init.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/is_file_newer_than.c.zip.o llamafile/is_file_newer_than.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/is_file_newer_than.c.zip.o llamafile/is_file_newer_than.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/launch_browser.c.zip.o llamafile/launch_browser.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/launch_browser.c.zip.o llamafile/launch_browser.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/llamafile-250x250.png.zip.o llamafile/llamafile-250x250.png
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/llamafile-640x640.png.zip.o llamafile/llamafile-640x640.png
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/llamafile-250x250.png.zip.o llamafile/llamafile-250x250.png
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/llamafile-640x640.png.zip.o llamafile/llamafile-640x640.png
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/llamafile.c.zip.o llamafile/llamafile.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/llamafile.h.zip.o llamafile/llamafile.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/llamafile.c.zip.o llamafile/llamafile.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/llamafile.h.zip.o llamafile/llamafile.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/llamafile.svg.zip.o llamafile/llamafile.svg
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/log.c.zip.o llamafile/log.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/log.c.zip.o llamafile/log.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/log.h.zip.o llamafile/log.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/log.h.zip.o llamafile/log.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/metal.c.zip.o llamafile/metal.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/metal.c.zip.o llamafile/metal.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/rocm.bat.zip.o llamafile/rocm.bat
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/rocm.bat.zip.o llamafile/rocm.bat
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/rocm.sh.zip.o llamafile/rocm.sh
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/rocm.sh.zip.o llamafile/rocm.sh
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/schlep.c.zip.o llamafile/schlep.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/schlep.c.zip.o llamafile/schlep.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/tinyblas.cu.zip.o llamafile/tinyblas.cu
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/tinyblas.h.zip.o llamafile/tinyblas.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/tinyblas.h.zip.o llamafile/tinyblas.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/tinyblas.cu.zip.o llamafile/tinyblas.cu
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/version.h.zip.o llamafile/version.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/version.h.zip.o llamafile/version.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/x.c.zip.o llamafile/x.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/x.c.zip.o llamafile/x.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/x.h.zip.o llamafile/x.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/x.h.zip.o llamafile/x.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/zipalign.1.zip.o llamafile/zipalign.1
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/zipalign.1.zip.o llamafile/zipalign.1
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/zipalign.1.asc.zip.o llamafile/zipalign.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/zipalign.1.asc.zip.o llamafile/zipalign.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/zipalign.c.zip.o llamafile/zipalign.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/zip.c.zip.o llamafile/zip.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/zipalign.c.zip.o llamafile/zipalign.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/zip.c.zip.o llamafile/zip.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/zipcheck.c.zip.o llamafile/zipcheck.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/zipcheck.c.zip.o llamafile/zipcheck.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llamafile/zip.h.zip.o llamafile/zip.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/zip.h.zip.o llamafile/zip.h
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/ggml-alloc.o llama.cpp/ggml-alloc.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/ggml-backend.o llama.cpp/ggml-backend.c
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/ggml.o llama.cpp/ggml.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llamafile//.aarch64/llamafile.svg.zip.o llamafile/llamafile.svg
+.cosmocc/3.2.4/bin/cosmocc -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/ggml-quants.o llama.cpp/ggml-quants.c
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/build-info.o llama.cpp/build-info.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/common.o llama.cpp/common.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/console.o llama.cpp/console.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/grammar-parser.o llama.cpp/grammar-parser.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/llama.o llama.cpp/llama.cpp
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions -DGGML_MULTIPLATFORM  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/sampling.o llama.cpp/sampling.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/base64.h.zip.o llama.cpp/base64.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/base64.h.zip.o llama.cpp/base64.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/build-info.cpp.zip.o llama.cpp/build-info.cpp
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/build-info.cpp.zip.o llama.cpp/build-info.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/BUILD.mk.zip.o llama.cpp/BUILD.mk
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/BUILD.mk.zip.o llama.cpp/BUILD.mk
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/common.cpp.zip.o llama.cpp/common.cpp
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/common.cpp.zip.o llama.cpp/common.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/common.h.zip.o llama.cpp/common.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/common.h.zip.o llama.cpp/common.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/console.cpp.zip.o llama.cpp/console.cpp
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/console.cpp.zip.o llama.cpp/console.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/console.h.zip.o llama.cpp/console.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/console.h.zip.o llama.cpp/console.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-alloc.c.zip.o llama.cpp/ggml-alloc.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-alloc.c.zip.o llama.cpp/ggml-alloc.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-alloc.h.zip.o llama.cpp/ggml-alloc.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-alloc.h.zip.o llama.cpp/ggml-alloc.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-backend.c.zip.o llama.cpp/ggml-backend.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-backend.c.zip.o llama.cpp/ggml-backend.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-backend.h.zip.o llama.cpp/ggml-backend.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-backend.h.zip.o llama.cpp/ggml-backend.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-backend-impl.h.zip.o llama.cpp/ggml-backend-impl.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-backend-impl.h.zip.o llama.cpp/ggml-backend-impl.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml.c.zip.o llama.cpp/ggml.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml.c.zip.o llama.cpp/ggml.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-cuda.cu.zip.o llama.cpp/ggml-cuda.cu
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-cuda.cu.zip.o llama.cpp/ggml-cuda.cu
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-cuda.h.zip.o llama.cpp/ggml-cuda.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-cuda.h.zip.o llama.cpp/ggml-cuda.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml.h.zip.o llama.cpp/ggml.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml.h.zip.o llama.cpp/ggml.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-impl.h.zip.o llama.cpp/ggml-impl.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-impl.h.zip.o llama.cpp/ggml-impl.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-metal.h.zip.o llama.cpp/ggml-metal.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-metal.h.zip.o llama.cpp/ggml-metal.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-metal.m.zip.o llama.cpp/ggml-metal.m
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-metal.m.zip.o llama.cpp/ggml-metal.m
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-metal.metal.zip.o llama.cpp/ggml-metal.metal
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-metal.metal.zip.o llama.cpp/ggml-metal.metal
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-quants.c.zip.o llama.cpp/ggml-quants.c
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-quants.c.zip.o llama.cpp/ggml-quants.c
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml-quants.h.zip.o llama.cpp/ggml-quants.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml-quants.h.zip.o llama.cpp/ggml-quants.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_iq2_xxs_q8_K.inc.zip.o llama.cpp/ggml_vec_dot_iq2_xxs_q8_K.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_iq2_xxs_q8_K.inc.zip.o llama.cpp/ggml_vec_dot_iq2_xxs_q8_K.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q2_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q2_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q2_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q2_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q3_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q3_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q3_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q3_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q4_0_q8_0.inc.zip.o llama.cpp/ggml_vec_dot_q4_0_q8_0.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q4_0_q8_0.inc.zip.o llama.cpp/ggml_vec_dot_q4_0_q8_0.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q4_1_q8_1.inc.zip.o llama.cpp/ggml_vec_dot_q4_1_q8_1.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q4_1_q8_1.inc.zip.o llama.cpp/ggml_vec_dot_q4_1_q8_1.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q4_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q4_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q4_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q4_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q5_0_q8_0.inc.zip.o llama.cpp/ggml_vec_dot_q5_0_q8_0.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q5_0_q8_0.inc.zip.o llama.cpp/ggml_vec_dot_q5_0_q8_0.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q5_1_q8_1.inc.zip.o llama.cpp/ggml_vec_dot_q5_1_q8_1.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q5_1_q8_1.inc.zip.o llama.cpp/ggml_vec_dot_q5_1_q8_1.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q5_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q5_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q5_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q5_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q6_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q6_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q6_K_q8_K_256.inc.zip.o llama.cpp/ggml_vec_dot_q6_K_q8_K_256.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/ggml_vec_dot_q8_0_q8_0.inc.zip.o llama.cpp/ggml_vec_dot_q8_0_q8_0.inc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/ggml_vec_dot_q8_0_q8_0.inc.zip.o llama.cpp/ggml_vec_dot_q8_0_q8_0.inc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/grammar-parser.cpp.zip.o llama.cpp/grammar-parser.cpp
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/grammar-parser.cpp.zip.o llama.cpp/grammar-parser.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/grammar-parser.h.zip.o llama.cpp/grammar-parser.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/grammar-parser.h.zip.o llama.cpp/grammar-parser.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/llama.cpp.zip.o llama.cpp/llama.cpp
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/llama.cpp.zip.o llama.cpp/llama.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/llamafile.h.zip.o llama.cpp/llamafile.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/llamafile.h.zip.o llama.cpp/llamafile.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/llama.h.zip.o llama.cpp/llama.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/llama.h.zip.o llama.cpp/llama.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/log.h.zip.o llama.cpp/log.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/log.h.zip.o llama.cpp/log.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/README.llamafile.zip.o llama.cpp/README.llamafile
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/README.llamafile.zip.o llama.cpp/README.llamafile
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/sampling.cpp.zip.o llama.cpp/sampling.cpp
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/sampling.cpp.zip.o llama.cpp/sampling.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/sampling.h.zip.o llama.cpp/sampling.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/sampling.h.zip.o llama.cpp/sampling.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/stb_image.h.zip.o llama.cpp/stb_image.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/stb_image.h.zip.o llama.cpp/stb_image.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/unicode.h.zip.o llama.cpp/unicode.h
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp//.aarch64/unicode.h.zip.o llama.cpp/unicode.h
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/main/main.1.asc.zip.o llama.cpp/main/main.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/main//.aarch64/main.1.asc.zip.o llama.cpp/main/main.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/server/public/completion.js.zip.o llama.cpp/server/public/completion.js
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/server/public//.aarch64/completion.js.zip.o llama.cpp/server/public/completion.js
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/server/public/index.html.zip.o llama.cpp/server/public/index.html
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/server/public//.aarch64/index.html.zip.o llama.cpp/server/public/index.html
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/server/public/index.js.zip.o llama.cpp/server/public/index.js
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/server/public//.aarch64/index.js.zip.o llama.cpp/server/public/index.js
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/server/public/json-schema-to-grammar.mjs.zip.o llama.cpp/server/public/json-schema-to-grammar.mjs
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/server/public//.aarch64/json-schema-to-grammar.mjs.zip.o llama.cpp/server/public/json-schema-to-grammar.mjs
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/llava/llava-quantize.1.asc.zip.o llama.cpp/llava/llava-quantize.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/llava//.aarch64/llava-quantize.1.asc.zip.o llama.cpp/llava/llava-quantize.1.asc
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/quantize/quantize.o llama.cpp/quantize/quantize.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/quantize/quantize.1.asc.zip.o llama.cpp/quantize/quantize.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/quantize//.aarch64/quantize.1.asc.zip.o llama.cpp/quantize/quantize.1.asc
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  -iquote. -mcosmo -DGGML_MULTIPLATFORM  -Xx86_64-mssse3 -c -o o//llama.cpp/perplexity/perplexity.o llama.cpp/perplexity/perplexity.cpp
+.cosmocc/3.2.4/bin/zipobj  -a x86_64 -o o//llama.cpp/perplexity/perplexity.1.asc.zip.o llama.cpp/perplexity/perplexity.1.asc
+.cosmocc/3.2.4/bin/zipobj  -a aarch64 -o o//llama.cpp/perplexity//.aarch64/perplexity.1.asc.zip.o llama.cpp/perplexity/perplexity.1.asc
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llamafile/zipalign.o o//llamafile/help.o o//llamafile/has.o o//llamafile/zipalign.1.asc.zip.o   -o o//llamafile/zipalign
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llamafile/zipcheck.o o//llamafile/zip.o   -o o//llamafile/zipcheck
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llamafile/addnl.o   -o o//llamafile/addnl
+cc1: note: rewrote 1 switch statements
+.cosmocc/3.2.4/bin/cosmoar rcsD o//llama.cpp/llava/llava.a o//llama.cpp/llava/clip.o o//llama.cpp/llava/llava-cli.o o//llama.cpp/llava/llava.o o//llama.cpp/llava/llava-quantize.o
+.cosmocc/3.2.4/bin/cosmoar rcsD o//llama.cpp/llama.cpp.a o//llamafile/addnl.o o//llamafile/check_cpu.o o//llamafile/cuda.o o//llamafile/extract.o o//llamafile/get_app_dir.o o//llamafile/get_tmp_dir.o o//llamafile/gpu.o o//llamafile/has.o o//llamafile/help.o o//llamafile/init.o o//llamafile/is_file_newer_than.o o//llamafile/launch_browser.o o//llamafile/llamafile.o o//llamafile/log.o o//llamafile/metal.o o//llamafile/schlep.o o//llamafile/x.o o//llamafile/zipalign.o o//llamafile/zip.o o//llamafile/zipcheck.o o//llamafile/addnl.c.zip.o o//llamafile/BUILD.mk.zip.o o//llamafile/check_cpu.c.zip.o o//llamafile/compcap.cu.zip.o o//llamafile/copy.sh.zip.o o//llamafile/cuda.bat.zip.o o//llamafile/cuda.c.zip.o o//llamafile/cuda.sh.zip.o o//llamafile/extract.c.zip.o o//llamafile/get_app_dir.c.zip.o o//llamafile/get_tmp_dir.c.zip.o o//llamafile/gpu.c.zip.o o//llamafile/has.c.zip.o o//llamafile/help.c.zip.o o//llamafile/init.c.zip.o o//llamafile/is_file_newer_than.c.zip.o o//llamafile/launch_browser.c.zip.o o//llamafile/llamafile-250x250.png.zip.o o//llamafile/llamafile-640x640.png.zip.o o//llamafile/llamafile.c.zip.o o//llamafile/llamafile.h.zip.o o//llamafile/llamafile.svg.zip.o o//llamafile/log.c.zip.o o//llamafile/log.h.zip.o o//llamafile/metal.c.zip.o o//llamafile/rocm.bat.zip.o o//llamafile/rocm.sh.zip.o o//llamafile/schlep.c.zip.o o//llamafile/tinyblas.cu.zip.o o//llamafile/tinyblas.h.zip.o o//llamafile/version.h.zip.o o//llamafile/x.c.zip.o o//llamafile/x.h.zip.o o//llamafile/zipalign.1.zip.o o//llamafile/zipalign.1.asc.zip.o o//llamafile/zipalign.c.zip.o o//llamafile/zip.c.zip.o o//llamafile/zipcheck.c.zip.o o//llamafile/zip.h.zip.o o//llama.cpp/ggml-alloc.o o//llama.cpp/ggml-backend.o o//llama.cpp/ggml.o o//llama.cpp/ggml-quants.o o//llama.cpp/build-info.o o//llama.cpp/common.o o//llama.cpp/console.o o//llama.cpp/grammar-parser.o o//llama.cpp/llama.o o//llama.cpp/sampling.o o//llama.cpp/base64.h.zip.o o//llama.cpp/build-info.cpp.zip.o o//llama.cpp/BUILD.mk.zip.o o//llama.cpp/common.cpp.zip.o o//llama.cpp/common.h.zip.o o//llama.cpp/console.cpp.zip.o o//llama.cpp/console.h.zip.o o//llama.cpp/ggml-alloc.c.zip.o o//llama.cpp/ggml-alloc.h.zip.o o//llama.cpp/ggml-backend.c.zip.o o//llama.cpp/ggml-backend.h.zip.o o//llama.cpp/ggml-backend-impl.h.zip.o o//llama.cpp/ggml.c.zip.o o//llama.cpp/ggml-cuda.cu.zip.o o//llama.cpp/ggml-cuda.h.zip.o o//llama.cpp/ggml.h.zip.o o//llama.cpp/ggml-impl.h.zip.o o//llama.cpp/ggml-metal.h.zip.o o//llama.cpp/ggml-metal.m.zip.o o//llama.cpp/ggml-metal.metal.zip.o o//llama.cpp/ggml-quants.c.zip.o o//llama.cpp/ggml-quants.h.zip.o o//llama.cpp/ggml_vec_dot_iq2_xxs_q8_K.inc.zip.o o//llama.cpp/ggml_vec_dot_q2_K_q8_K_256.inc.zip.o o//llama.cpp/ggml_vec_dot_q3_K_q8_K_256.inc.zip.o o//llama.cpp/ggml_vec_dot_q4_0_q8_0.inc.zip.o o//llama.cpp/ggml_vec_dot_q4_1_q8_1.inc.zip.o o//llama.cpp/ggml_vec_dot_q4_K_q8_K_256.inc.zip.o o//llama.cpp/ggml_vec_dot_q5_0_q8_0.inc.zip.o o//llama.cpp/ggml_vec_dot_q5_1_q8_1.inc.zip.o o//llama.cpp/ggml_vec_dot_q5_K_q8_K_256.inc.zip.o o//llama.cpp/ggml_vec_dot_q6_K_q8_K_256.inc.zip.o o//llama.cpp/ggml_vec_dot_q8_0_q8_0.inc.zip.o o//llama.cpp/grammar-parser.cpp.zip.o o//llama.cpp/grammar-parser.h.zip.o o//llama.cpp/llama.cpp.zip.o o//llama.cpp/llamafile.h.zip.o o//llama.cpp/llama.h.zip.o o//llama.cpp/log.h.zip.o o//llama.cpp/README.llamafile.zip.o o//llama.cpp/sampling.cpp.zip.o o//llama.cpp/sampling.h.zip.o o//llama.cpp/stb_image.h.zip.o o//llama.cpp/unicode.h.zip.o
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/llava/llava-quantize.o o//llama.cpp/llava/llava-quantize.1.asc.zip.o o//llama.cpp/llava/llava.a o//llama.cpp/llama.cpp.a   -o o//llama.cpp/llava/llava-quantize
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/quantize/quantize.o o//llama.cpp/quantize/quantize.1.asc.zip.o o//llama.cpp/llama.cpp.a   -o o//llama.cpp/quantize/quantize
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/perplexity/perplexity.o o//llama.cpp/perplexity/perplexity.1.asc.zip.o o//llama.cpp/llama.cpp.a   -o o//llama.cpp/perplexity/perplexity
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+collect2: error: ld returned 1 exit status
+make: *** [build/rules.mk:24: o//llama.cpp/llava/llava-quantize] Error 1
+make: *** Waiting for unfinished jobs....
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+collect2: error: ld returned 1 exit status
+make: *** [build/rules.mk:24: o//llama.cpp/quantize/quantize] Error 1
+collect2: error: ld returned 1 exit status
+make: *** [build/rules.mk:24: o//llama.cpp/perplexity/perplexity] Error 1
+
+➜ make -j8
+.cosmocc/3.2.4/bin/cosmoar rcsD o//llama.cpp/server/server.a o//llama.cpp/server/server.o
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/llava/llava-quantize.o o//llama.cpp/llava/llava-quantize.1.asc.zip.o o//llama.cpp/llava/llava.a o//llama.cpp/llama.cpp.a   -o o//llama.cpp/llava/llava-quantize
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/quantize/quantize.o o//llama.cpp/quantize/quantize.1.asc.zip.o o//llama.cpp/llama.cpp.a   -o o//llama.cpp/quantize/quantize
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/perplexity/perplexity.o o//llama.cpp/perplexity/perplexity.1.asc.zip.o o//llama.cpp/llama.cpp.a   -o o//llama.cpp/perplexity/perplexity
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/main/main.o o//llama.cpp/server/server.a o//llama.cpp/llava/llava.a o//llama.cpp/llama.cpp.a o//llama.cpp/main/main.1.asc.zip.o o//llama.cpp/server/public/completion.js.zip.o o//llama.cpp/server/public/index.html.zip.o o//llama.cpp/server/public/index.js.zip.o o//llama.cpp/server/public/json-schema-to-grammar.mjs.zip.o   -o o//llama.cpp/main/main
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+collect2: error: ld returned 1 exit status
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+make: *** [build/rules.mk:24: o//llama.cpp/llava/llava-quantize] Error 1
+make: *** Waiting for unfinished jobs....
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+collect2: error: ld returned 1 exit status
+make: *** [build/rules.mk:24: o//llama.cpp/quantize/quantize] Error 1
+collect2: error: ld returned 1 exit status
+make: *** [build/rules.mk:24: o//llama.cpp/perplexity/perplexity] Error 1
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+collect2: error: ld returned 1 exit status
+make: *** [build/rules.mk:24: o//llama.cpp/main/main] Error 1

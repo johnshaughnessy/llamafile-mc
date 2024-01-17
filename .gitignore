@@ -9,3 +9,4 @@
 /perf.data.old
 
 /*.log
+!/log

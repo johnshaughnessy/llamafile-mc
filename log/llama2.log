@@ -1,0 +1,139 @@
+➜ ~/Downloads/llava-v1.5-7b-q4.llamafile --gpu amd --nobrowser -ngl 35
+initializing gpu module...
+/opt/rocm/bin/rocminfo
+hipcc -O3 -fPIC -shared -DNDEBUG --offload-arch=gfx1030 -march=native -mtune=native -use_fast_math -DGGML_BUILD=1 -DGGML_SHARED=1 -Wno-return-type -Wno-unused-result -DGGML_USE_HIPBLAS -DGGML_CUDA_MMV_Y=1 -DGGML_CUDA_DMMV_X=32 -DIGNORE4 -DK_QUANTS_PER_ITERATION=2 -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DIGNORE -o /home/john/.llamafile/ggml-rocm.so.dnipy6 /home/john/.llamafile/ggml-cuda.cu -lhipblas -lrocblas
+dynamically linking /home/john/.llamafile/ggml-rocm.so
+llava-v1.5-7b-q4.llamafile: /usr/src/debug/hip-runtime-amd/clr-rocm-5.7.1/rocclr/os/os_posix.cpp:310: static void amd::Os::currentStackInfo(unsigned char**, size_t*): Assertion `Os::currentStackPtr() >= *base - *size && Os::currentStackPtr() < *base && "just checking"' failed.
+cosmoaddr2line /home/john/Downloads/llava-v1.5-7b-q4.llamafile 7ff98a93983c 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010 7ff98a8a9010
+
+0x00007ff98a93983c: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+0x00007ff98a8a9010: ?? ??:0
+
+10008004-10008018 rw-pa-     21x automap 1344kB w/ 2052mB hole
+1001005b-1001ffa4 r--s-- 65'354x automap 4085mB w/ 96tB hole
+6fd00004-6fd0000b rw-paF      8x zipos 512kB w/ 64gB hole
+6fe00004-6fe00004 rw-paF      1x g_fds 64kB
+# 4087mB total mapped memory
+/home/john/Downloads/llava-v1.5-7b-q4.llamafile -m llava-v1.5-7b-Q4_K.gguf --mmproj llava-v1.5-7b-mmproj-Q4_0.gguf --gpu amd --nobrowser -ngl 35
+[1]    41074 IOT instruction (core dumped)  ~/Downloads/llava-v1.5-7b-q4.llamafile --gpu amd --nobrowser -ngl 35

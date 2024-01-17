@@ -12,6 +12,8 @@ My goal is to wrap the backend in a llamafile, and serve a browser front-end usi
 
 # Dev Log
 
+I am writing this dev log as I get things set up so that I don't forget what I've done or what I've learned. I've also added some files to the `log/` directory.
+
 ## Dependencies
 
 > Developing on llamafile requires a modern version of the GNU `make` command
@@ -120,7 +122,7 @@ See "unzip -hh" or unzip.txt for more help.  Examples:
 
 To my surprise, this command started a wine prompt. Why? What is it doing?
 
-![screenshot](./screenshots/screenshot_01.png)
+![screenshot](./log/screenshot_01.png)
 
 The README.md mentions WINE in the gotchas section:
 
@@ -237,7 +239,7 @@ Let's try again. Only this time, let's pass `--gpu amd` (`llamafile2.log`).
 
 I wonder why `wineserver` is running. Is that related? I'll have to find out.
 
-![screenshot](./screenshots/screenshot_02.png)
+![screenshot](./log/screenshot_02.png)
 
 Ok, I found out. After I rebooted, the `binfmt_misc` registrations I added were removed, so wine was invoked for the llamafile binary format. Surprisingly, it seemed that everything worked, but it was extremely slow to start. When I added the correct registrations then the server started immediately.
 

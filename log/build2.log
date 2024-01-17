@@ -1,0 +1,368 @@
+
+➜ make -j8
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/main/main.o o//llama.cpp/server/server.a o//llama.cpp/llava/llava.a o//llama.cpp/llama.cpp.a o//llama.cpp/main/main.1.asc.zip.o o//llama.cpp/server/public/completion.js.zip.o o//llama.cpp/server/public/index.html.zip.o o//llama.cpp/server/public/index.js.zip.o o//llama.cpp/server/public/json-schema-to-grammar.mjs.zip.o   -o o//llama.cpp/main/main
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/llava/llava-quantize.o o//llama.cpp/llava/llava-quantize.1.asc.zip.o o//llama.cpp/llava/llava.a o//llama.cpp/llama.cpp.a   -o o//llama.cpp/llava/llava-quantize
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/quantize/quantize.o o//llama.cpp/quantize/quantize.1.asc.zip.o o//llama.cpp/llama.cpp.a   -o o//llama.cpp/quantize/quantize
+.cosmocc/3.2.4/bin/cosmoc++ -g -O3 -fexceptions  o//llama.cpp/perplexity/perplexity.o o//llama.cpp/perplexity/perplexity.1.asc.zip.o o//llama.cpp/llama.cpp.a   -o o//llama.cpp/perplexity/perplexity
+0094:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0094:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0094:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0094:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0094:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0094:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0094:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0094:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0094:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+02e0:fixme:file:server_get_file_info Unsupported info class 1c
+02b0:fixme:file:server_get_file_info Unsupported info class 1c
+02a8:fixme:file:server_get_file_info Unsupported info class 1c
+02d0:fixme:file:server_get_file_info Unsupported info class 1c
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02b0:fixme:file:server_get_file_info Unsupported info class 1c
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02d0:fixme:file:server_get_file_info Unsupported info class 1c
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02e0:fixme:file:NtFsControlFile FSCTL_GET_REPARSE_POINT semi-stub
+02a8:fixme:file:server_get_file_info Unsupported info class 1c
+02e0:fixme:file:server_get_file_info Unsupported info class 1c
+02b0:fixme:file:server_get_file_info Unsupported info class 1c
+02d0:fixme:file:server_get_file_info Unsupported info class 1c
+02a8:fixme:file:server_get_file_info Unsupported info class 1c
+02e0:fixme:file:server_get_file_info Unsupported info class 1c
+0348:fixme:file:server_get_file_info Unsupported info class 1c
+0350:fixme:file:server_get_file_info Unsupported info class 1c
+0358:fixme:file:server_get_file_info Unsupported info class 1c
+0360:fixme:file:server_get_file_info Unsupported info class 1c
+0348:fixme:file:server_get_file_info Unsupported info class 1c
+0350:fixme:file:server_get_file_info Unsupported info class 1c
+0360:fixme:file:server_get_file_info Unsupported info class 1c
+0358:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+0400:fixme:file:server_get_file_info Unsupported info class 1c
+collect2: error: ld returned 1 exit status
+0350:fixme:file:server_get_file_info Unsupported info class 1c
+0350:fixme:file:server_get_file_info Unsupported info class 1c
+make: *** [build/rules.mk:24: o//llama.cpp/llava/llava-quantize] Error 1
+make: *** Waiting for unfinished jobs....
+03f8:fixme:file:server_get_file_info Unsupported info class 1c
+collect2: error: ld returned 1 exit status
+0358:fixme:file:server_get_file_info Unsupported info class 1c
+0358:fixme:file:server_get_file_info Unsupported info class 1c
+make: *** [build/rules.mk:24: o//llama.cpp/quantize/quantize] Error 1
+03f0:fixme:file:server_get_file_info Unsupported info class 1c
+collect2: error: ld returned 1 exit status
+0348:fixme:file:server_get_file_info Unsupported info class 1c
+0348:fixme:file:server_get_file_info Unsupported info class 1c
+make: *** [build/rules.mk:24: o//llama.cpp/perplexity/perplexity] Error 1
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `get_nvcc_arch_flag':
+/Z/home/john/src/llamafile/llamafile/cuda.c:403: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: o//llama.cpp/llama.cpp.a(cuda.o): in function `import_cuda_impl':
+/Z/home/john/src/llamafile/llamafile/cuda.c:721: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:847: undefined reference to `llamafile_get_app_dir'
+/Z/home/john/src/llamafile/.cosmocc/3.2.4/bin/../libexec/gcc/x86_64-linux-cosmo/11.2.0/ld.bfd: /Z/home/john/src/llamafile/llamafile/cuda.c:770: undefined reference to `llamafile_get_app_dir'
+03e8:fixme:file:server_get_file_info Unsupported info class 1c
+collect2: error: ld returned 1 exit status
+0360:fixme:file:server_get_file_info Unsupported info class 1c
+0360:fixme:file:server_get_file_info Unsupported info class 1c
+make: *** [build/rules.mk:24: o//llama.cpp/main/main] Error 1
