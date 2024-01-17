@@ -356,3 +356,245 @@ cosmoaddr2line /home/john/Downloads/llava-v1.5-7b-q4.llamafile 7ff98a93983c 7ff9
 [1]    41074 IOT instruction (core dumped)  ~/Downloads/llava-v1.5-7b-q4.llamafile --gpu amd --nobrowser -ngl 35
 
 ```
+
+Ok, so memory mapping seems to fail. Let's go back to building from source and see if it works with our symlink.
+
+Actually, building just works now, even when `/opt/rocm/bin` is not on my `$PATH` and there's no `hipcc -> clang++` symlink. Is it because build artifacts were already created? If so, where? How do I get a "fresh start"?
+
+Hmm. Alarming. I can't seem to recreate the original errors.
+
+Well, let's try out the examples from the `## Source installation` section of the readme.
+
+```sh
+curl -L -o "~/media/aimodels/mistral-7b-instruct-v0.1.Q4_K_M.gguf" https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf
+```
+
+````sh
+llamafile \
+  --gpu AMD \
+  -m ~/media/aimodels/wizardcoder-python-13b-v1.0.Q2_K.gguf \
+  --temp 0 \
+  -r '}\n' \
+  -r '```\n' \
+  -e -p '```c\nvoid *memcpy(void *dst, const void *src, size_t size) {\n'
+````
+
+More observations... `--gpu AMD` will fail if `/opt/rocm/bin` is not on my path.
+
+````sh
+➜ llamafile \
+  --gpu AMD \
+  -m ~/media/aimodels/wizardcoder-python-13b-v1.0.Q2_K.gguf \
+  --temp 0 \
+  -r '}\n' \
+  -r '```\n' \
+  -e -p '```c\nvoid *memcpy(void *dst, const void *src, size_t size) {\n'
+
+import_cuda_impl: initializing gpu module...
+get_rocm_bin_path: note: amdclang++ not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/amdclang++ does not exist
+get_rocm_bin_path: note: /opt/rocm/bin/amdclang++ does not exist
+get_rocm_bin_path: note: hipInfo not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/hipInfo does not exist
+get_rocm_bin_path: note: /opt/rocm/bin/hipInfo does not exist
+get_rocm_bin_path: note: rocminfo not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/rocminfo does not exist
+llamafile_log_command: /opt/rocm/bin/rocminfo
+llamafile_log_command: hipcc -O3 -fPIC -shared -DNDEBUG --offload-arch=gfx1030 -march=native -mtune=native -use_fast_math -DGGML_BUILD=1 -DGGML_SHARED=1 -Wno-return-type -Wno-unused-result -DGGML_USE_HIPBLAS -DGGML_CUDA_MMV_Y=1 -DGGML_MULTIPLATFORM -DGGML_CUDA_DMMV_X=32 -DIGNORE4 -DK_QUANTS_PER_ITERATION=2 -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DIGNORE -o /home/john/.llamafile/ggml-rocm.so.t0taxr /home/john/.llamafile/ggml-cuda.cu -lhipblas -lrocblas
+hipcc: No such file or directory
+extract_cuda_dso: note: prebuilt binary /zip/ggml-rocm.so not found
+fatal error: support for --gpu amd was explicitly requested, but it wasn't available
+
+````
+
+When I do add the `rocm` binaries to my path, I get the same memory mapping errors as before:
+
+```sh
+➜ PATH=$PATH:/opt/rocm/bin
+```
+
+````sh
+➜ llamafile \
+  --gpu AMD \
+  -m ~/media/aimodels/wizardcoder-python-13b-v1.0.Q2_K.gguf \
+  --temp 0 \
+  -r '}\n' \
+  -r '```\n' \
+  -e -p '```c\nvoid *memcpy(void *dst, const void *src, size_t size) {\n'
+
+import_cuda_impl: initializing gpu module...
+get_rocm_bin_path: note: amdclang++ not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/amdclang++ does not exist
+get_rocm_bin_path: note: /opt/rocm/bin/amdclang++ does not exist
+get_rocm_bin_path: note: hipInfo not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/hipInfo does not exist
+get_rocm_bin_path: note: /opt/rocm/bin/hipInfo does not exist
+llamafile_log_command: /opt/rocm/bin/rocminfo
+llamafile_log_command: hipcc -O3 -fPIC -shared -DNDEBUG --offload-arch=gfx1030 -march=native -mtune=native -use_fast_math -DGGML_BUILD=1 -DGGML_SHARED=1 -Wno-return-type -Wno-unused-result -DGGML_USE_HIPBLAS -DGGML_CUDA_MMV_Y=1 -DGGML_MULTIPLATFORM -DGGML_CUDA_DMMV_X=32 -DIGNORE4 -DK_QUANTS_PER_ITERATION=2 -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DIGNORE -o /home/john/.llamafile/ggml-rocm.so.re6ny7 /home/john/.llamafile/ggml-cuda.cu -lhipblas -lrocblas
+/home/john/.llamafile/ggml-cuda.cu:5712:24: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+static __global__ void soft_max_f32(const float * x, const float * y, float * dst, const int ncols_par, const int nrows_y, const float scale) {
+                       ^
+/home/john/.llamafile/ggml-cuda.cu:5712:24: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/john/.llamafile/ggml-cuda.cu:5712:24: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/john/.llamafile/ggml-cuda.cu:5712:24: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/john/.llamafile/ggml-cuda.cu:5712:24: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+/home/john/.llamafile/ggml-cuda.cu:5712:24: warning: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+6 warnings generated when compiling for gfx1030.
+link_cuda_dso: note: dynamically linking /home/john/.llamafile/ggml-rocm.so
+llamafile: /usr/src/debug/hip-runtime-amd/clr-rocm-5.7.1/rocclr/os/os_posix.cpp:310: static void amd::Os::currentStackInfo(unsigned char**, size_t*): Assertion `Os::currentStackPtr() >= *base - *size && Os::currentStackPtr() < *base && "just checking"' failed.
+cosmoaddr2line /usr/local/bin/llamafile 7f204164e83c 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010 7f20415be010
+
+0x00007f204164e83c: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+0x00007f20415be010: ?? ??:0
+
+10008004-10008018 rw-pa- 21x automap 1344kB w/ 8384kB hole
+1000809c-100080a3 r--s--  8x automap 451kB w/ 96tB hole
+6fd00004-6fd0000c rw-paF  9x zipos 576kB w/ 64gB hole
+6fe00004-6fe00004 rw-paF  1x g_fds 64kB
+# 2496kB total mapped memory
+/usr/local/bin/llamafile --gpu AMD -m /home/john/media/aimodels/wizardcoder-python-13b-v1.0.Q2_K.gguf --temp 0 -r }\n -r ```\n -e -p ```c\nvoid *memcpy(void *dst, const void *src, size_t size) {\n
+[1]    76267 IOT instruction (core dumped)  llamafile --gpu AMD -m ~/media/aimodels/wizardcoder-python-13b-v1.0.Q2_K.gguf
+````
+
+Hmm, what's the next step to debug this?
+
+````sh
+llamafile \
+  --gpu AMD \
+  -m ~/media/aimodels/wizardcoder-python-13b-v1.0.Q2_K.gguf \
+  --temp 0 \
+  -r '}\n' \
+  -r '```\n' \
+  -e -p '```c\nvoid *memcpy(void *dst, const void *src, size_t size) {\n'
+````
+
+I've been looking through issues on github and trying things I find there, but none seem to be a fix for this specific issue. It works if I pass `--gpu cpu`, but fails with `--gpu amd`.
+
+The output might mean that `cosmoaddr2line` is failing to resolve addresses.
+
+> cosmoaddr2line
+>
+> The cosmoaddr2line program may be used to print backtraces, based on DWARF data, whenever one of your programs reports a crash. It accepts as an argument the ELF executable produced by cosmocc, which is different from the APE executable. For example, if cosmocc compiles a program named hello then you'll need to pass either hello.com.dbg (x86-64) or hello.aarch64.elf to cosmoaddr2line to get the backtrace. After the ELf executable comes the program counter (instruction pointer) addresses which are easily obtained using \_\_builtin_frame_address(0). Cosmo can make this easier in certain cases. The ShowCrashReports() feature may print the cosmoaddr2line command you'll need to run, to get a better backtrace. On Windows, the Cosmopolitan runtime will output the command to the --strace log whenever your program dies due to a fatal signal that's blocked or in the SIG_DFL disposition.
+
+Perhaps it's time for me to write a github issue asking for support.
