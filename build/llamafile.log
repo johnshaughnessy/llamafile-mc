@@ -1,0 +1,113 @@
+➜ ~/Downloads/llava-v1.5-7b-q4.llamafile
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:hid:handle_IRP_MN_QUERY_ID Unhandled type 00000005
+0084:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0084:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0084:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0084:fixme:xinput:pdo_pnp IRP_MN_QUERY_ID type 5, not implemented!
+0118:fixme:file:server_get_file_info Unsupported info class 1c
+{"timestamp":1705452240,"level":"INFO","function":"server_cli","line":2812,"message":"build info","build":1500,"commit":"a30b324"}
+{"timestamp":1705452240,"level":"INFO","function":"server_cli","line":2815,"message":"system info","n_threads":12,"n_threads_batch":-1,"total_threads":24,"system_info":"AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 1 | NEON = 0
+| ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | "}
+Multi Modal Mode Enabledclip_model_load: model name:   openai/clip-vit-large-patch14-336
+clip_model_load: description:  image encoder for LLaVA
+clip_model_load: GGUF version: 3
+clip_model_load: alignment:    32
+clip_model_load: n_tensors:    377
+clip_model_load: n_kv:         19
+clip_model_load: ftype:        q4_0
+
+clip_model_load: CLIP using CPU backend
+clip_model_load: text_encoder:   0
+clip_model_load: vision_encoder: 1
+clip_model_load: llava_projector:  1
+clip_model_load: model size:     169.22 MB
+clip_model_load: metadata size:  0.14 MB
+clip_model_load: params backend buffer size =  169.22 MB (377 tensors)
+clip_model_load: compute allocated memory: 32.89 MB
+llama_model_loader: loaded meta data with 19 key-value pairs and 291 tensors from llava-v1.5-7b-Q4_K.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+llama_model_loader: - kv   2:                       llama.context_length u32              = 4096
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 11008
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 32
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                          general.file_type u32              = 15
+llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  12:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  13:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  15:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  16:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  17:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  18:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 4096
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 32
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 4096
+llm_load_print_meta: n_embd_v_gqa     = 4096
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 11008
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 4096
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 6.74 B
+llm_load_print_meta: model size       = 3.80 GiB (4.84 BPW)
+llm_load_print_meta: general.name     = LLaMA v2
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: PAD token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size       =    0.11 MiB
+llm_load_tensors: system memory used  = 3891.35 MiB
+..................................................................................................
+llama_new_context_with_model: n_ctx      = 2048
+llama_new_context_with_model: freq_base  = 10000.0
+llama_new_context_with_model: freq_scale = 1
+llama_new_context_with_model: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+llama_build_graph: non-view tensors processed: 676/676
+llama_new_context_with_model: compute buffer total size = 159.19 MiB
+Available slots:
+ -> Slot 0 - max context: 2048
+
+llama server listening at http://127.0.0.1:8080
+
+opening browser tab... (pass --nobrowser to disable)
+warning: this OS doesn't support pledge() security
+{"timestamp":1705452400,"level":"INFO","function":"server_cli","line":3289,"message":"HTTP server listening","port":"8080","hostname":"127.0.0.1"}
+all slots are idle and system prompt is empty, clear the KV cache
+0160:fixme:file:server_get_file_info Unsupported info class 1c
+{"timestamp":1705452400,"level":"INFO","function":"log_server_request","line":2741,"message":"request","remote_addr":"127.0.0.1","remote_port":41846,"status":200,"method":"GET","path":"/","params":{}}

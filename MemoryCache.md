@@ -223,4 +223,20 @@ The README mentions:
 
 > AMD GPU owners need to install the ROCm SDK. If llamafile detects the presence of an SDK, then it'll compile a native module just for your system that uses either the cuBLAS or hipBLAS library.
 
-On archlinux, it appears that there are some [repositories](https://github.com/rocm-arch/rocm-arch) set up for doing just that. So I'll just `pacman -S rocm-hip-sdk` and try again.
+On archlinux, it appears that there are some [repositories](https://github.com/rocm-arch/rocm-arch) set up for doing just that. So I'll just `pacman -S rocm-hip-sdk` and try again. I installed `rocm-hip-sdk`, rebooted (just in case) and tried again, to no avail (`build2.log`).
+
+Perhaps it's best to take a step back and try to run an existing llamafile, rather than building from source.
+
+While one is downloading, let's poke around at some of the recent commits related to AMD and try to figure out what causes `make` to build for NVIDIA or for AMD gpus (if it chooses one or the other at all).
+
+- https://github.com/Mozilla-Ocho/llamafile/commit/67d97b520278232f88b852e8e6d61847ce0728b8
+
+Ok, the download is finished. Let's run it. It works (`llamafile.log`).
+
+Let's try again. Only this time, let's pass `--gpu amd` (`llamafile2.log`).
+
+I wonder why `wineserver` is running. Is that related? I'll have to find out.
+
+![screenshot](./screenshots/screenshot_02.png)
+
+Anyway, I can't tell if the GPU flag is being respected. If I put in `--gpu foo`, it should fail, right?
